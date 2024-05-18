@@ -43,8 +43,8 @@ export default ({ mode }) =>
           ],
         },
         manifest: {
-          name: loadEnv(mode, process.cwd()).VITE_SITE_NAME,
-          short_name: loadEnv(mode, process.cwd()).VITE_SITE_NAME,
+          name: "Starry Ocean of shmily",
+          short_name: "Starry Ocean of shmily",
           description: loadEnv(mode, process.cwd()).VITE_SITE_DES,
           display: "standalone",
           start_url: "/",
