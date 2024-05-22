@@ -4,11 +4,9 @@
       <div v-if="!store.playerState || !store.playerLrcShow" class="power">
         <span>
           Copyright&nbsp;&copy;
-          <span v-if="siteStartDate?.length >= 4" class="site-start">
-            {{ siteStartDate.substring(0, 4) }}
-            -
+          <span  class="site-start">
+            {{ siteStartDate }}
           </span>
-          {{ fullYear }}
           <a :href="siteUrl">{{ siteAnthor }}</a>
         </span>
         <!-- 以下信息请不要修改哦 -->
@@ -46,7 +44,7 @@ const store = mainStore();
 const fullYear = new Date().getFullYear();
 
 // 加载配置数据
-const siteStartDate = ref(import.meta.env.VITE_SITE_START);
+const siteStartDate = ref("2024-05-20");
 const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
 const siteAnthor = ref(import.meta.env.VITE_SITE_ANTHOR);
 const siteUrl = computed(() => {

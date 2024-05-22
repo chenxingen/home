@@ -41,7 +41,8 @@ const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 // 站点链接
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "shmily".split(".");
+  //VITE_SITE_ANTHOR
+  if (!url) return "chenxingen".split(".");
   // 判断协议前缀
   if (url.startsWith("http://") || url.startsWith("https://")) {
     const urlFormat = url.replace(/^(https?:\/\/)/, "");
@@ -50,10 +51,10 @@ const siteUrl = computed(() => {
   return url.split(".");
 });
 
-// 简介区域文字
+// 简介区域文字VITE_DESC_TEXT
 const descriptionText = reactive({
-  hello: "Hello World !",
-  text: "一个建立于 21 世纪的小站，存活于互联网的边缘",
+  hello: "shmily!",
+  text: "你若瞄准月亮,即使迷失也是落在星辰之间;你若瞄准太阳,即使错过也将洒入万缕光芒",
 });
 
 // 切换右侧功能区
